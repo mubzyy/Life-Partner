@@ -6,6 +6,7 @@ import {
 } from 'react-icons/md';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { currentAdmin } from '../data/mockData';
+import logoImage from '../assets/Logo.jpeg';
 
 const navItems = [
   { label: 'Dashboard', path: '/', icon: <MdDashboard /> },
@@ -29,7 +30,7 @@ export default function Sidebar() {
       <div className="sidebar-logo">
         <div className="sidebar-logo-img-wrap">
           <img
-            src="/logo.png"
+            src={logoImage}
             alt="Life Partner Logo"
             className="sidebar-logo-img"
           />
