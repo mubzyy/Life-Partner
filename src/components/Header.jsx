@@ -5,14 +5,14 @@ import { currentAdmin, allNotifications } from '../data/mockData';
 
 const pageMeta = {
   '/': { title: 'Dashboard', sub: "Welcome back! Here's the latest analysis for today" },
-  '/users': { title: 'Users', sub: 'Manage all registered users on your platform.' },
-  '/profiles': { title: 'Profiles', sub: 'Browse and manage user profile details.' },
-  '/verifications': { title: 'Verifications', sub: 'Review and process pending verification requests.' },
-  '/reports': { title: 'Reports', sub: 'Detailed analytics and platform performance reports.' },
-  '/subscriptions': { title: 'Subscriptions', sub: 'Manage subscription plans and active subscribers.' },
-  '/payments': { title: 'Payments', sub: 'View and manage all payment transactions.' },
-  '/notifications': { title: 'Notifications', sub: 'Platform alerts and user activity notifications.' },
-  '/settings': { title: 'Settings', sub: 'Configure your platform and admin preferences.' },
+  '/users': { title: 'Users' },
+  '/profiles': { title: 'Profiles' },
+  '/verifications': { title: 'Verifications' },
+  '/reports': { title: 'Reports'},
+  '/subscriptions': { title: 'Subscriptions'},
+  '/payments': { title: 'Payments' },
+  '/notifications': { title: 'Notifications'},
+  '/settings': { title: 'Settings' },
 };
 
 export default function Header() {

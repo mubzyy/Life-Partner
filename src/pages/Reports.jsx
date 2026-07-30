@@ -30,7 +30,7 @@ export default function Reports() {
       <div className="page-header">
         <div className="page-header-left">
           <h2>Reports & Analytics</h2>
-
+         <p>Detailed analytics and performance reports.</p>
         </div>
         <select className="filter-select" value={period} onChange={e => setPeriod(e.target.value)}>
           <option>This Year</option>

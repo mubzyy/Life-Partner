@@ -69,9 +69,6 @@ export default function Sidebar() {
             <BsThreeDotsVertical />
           </button>
         </div>
-        <div className="sidebar-version">
-          Version 1.0.0<br />© 2026 Life Partner
-        </div>
       </div>
     </aside>
   );

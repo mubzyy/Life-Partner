@@ -311,7 +311,7 @@ export default function Settings() {
       <div className="page-header">
         <div className="page-header-left">
           <h2>Settings</h2>
-          <p>Manage your account, security, and platform configuration</p>
+          <p>Manage your account, security, and configuration</p>
         </div>
       </div>
 

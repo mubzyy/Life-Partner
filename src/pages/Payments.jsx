@@ -71,7 +71,7 @@ export default function Payments() {
       <div className="page-header">
         <div className="page-header-left">
           <h2>Payments</h2>
-          <p>All financial transactions on the platform</p>
+          <p>View and manage all payment transactions.</p>
         </div>
       </div>
 
