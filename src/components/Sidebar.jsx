@@ -12,7 +12,7 @@ const navItems = [
   { label: 'Users', path: '/users', icon: <MdPeople /> },
   { label: 'Profiles', path: '/profiles', icon: <MdPersonSearch /> },
   { label: 'Verifications', path: '/verifications', icon: <MdVerifiedUser /> },
-  { label: 'Reports', path: '/reports', icon: <MdBarChart />, },
+  { label: 'Reports', path: '/reports', icon: <MdBarChart /> },
   { label: 'Subscriptions', path: '/subscriptions', icon: <MdSubscriptions /> },
   { label: 'Payments', path: '/payments', icon: <MdPayment /> },
   { label: 'Notifications', path: '/notifications', icon: <MdNotifications /> },
