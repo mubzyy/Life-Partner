@@ -94,7 +94,7 @@ function randomItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 export const allUsers = Array.from({ length: 80 }, (_, i) => {
   const fn = firstNames[i % firstNames.length];
   const ln = lastNames[Math.floor(i / firstNames.length) % lastNames.length];
-  const city = randomItem(cities);
+  const city = cities[(i * 3 + 1) % cities.length];
   const plan = plans[i % plans.length];
   const status = i % 7 === 0 ? 'Inactive' : 'Active';
   const daysAgo = i + 1;
@@ -103,7 +103,7 @@ export const allUsers = Array.from({ length: 80 }, (_, i) => {
     id: i + 1,
     name: `${fn} ${ln}`,
     email: `${fn.toLowerCase()}.${ln.toLowerCase()}${i + 1}@gmail.com`,
-    phone: `03${String(Math.floor(Math.random() * 900000000 + 100000000))}`,
+    phone: `03${String(100000000 + ((i * 1234567) % 899999999))}`,
     city: `${city}, Pakistan`,
     plan,
     status,
@@ -123,9 +123,9 @@ export const allProfiles = allUsers.slice(0, 40).map((u, i) => ({
   ...u,
   age: 22 + (i % 18),
   height: `${5 + (i % 2)}'${i % 12}"`,
-  religion: randomItem(religions),
-  education: randomItem(educations),
-  profession: randomItem(professions),
+  religion: religions[i % religions.length],
+  education: educations[(i * 2) % educations.length],
+  profession: professions[(i * 3) % professions.length],
   maritalStatus: i % 8 === 0 ? 'Divorced' : i % 12 === 0 ? 'Widowed' : 'Never Married',
   profileComplete: 60 + (i % 40),
 }));
@@ -204,7 +204,7 @@ export const allPayments = allUsers.slice(0, 70).map((u, i) => ({
   method: paymentMethods[i % paymentMethods.length],
   status: i % 8 === 0 ? 'Failed' : i % 12 === 0 ? 'Pending' : 'Paid',
   date: new Date(Date.now() - i * 86400000 * 2).toLocaleDateString('en-GB'),
-  time: `${String(Math.floor(Math.random() * 12) + 1).padStart(2,'0')}:${String(Math.floor(Math.random() * 60)).padStart(2,'0')} PM`,
+  time: `${String((i % 12) + 1).padStart(2,'0')}:${String((i * 7) % 60).padStart(2,'0')} PM`,
 }));
 
 export const paymentSummary = {
